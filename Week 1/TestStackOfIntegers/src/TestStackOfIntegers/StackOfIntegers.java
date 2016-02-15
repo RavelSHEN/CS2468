@@ -8,6 +8,7 @@ public class StackOfIntegers {
   private int size;
   public static final int MAX_SIZE = 16;
 
+  //default constructor with max size
   public StackOfIntegers(){
     this(MAX_SIZE);
   }
@@ -17,12 +18,16 @@ public class StackOfIntegers {
   }
 
   public int push(int value){
-    if (size >= elements.length){
-      int[] temp = new int[elements.length * 2];
-      System.arraycopy(elements, 0, temp, 0, elements.length);
-      elements = temp;
+      if (size >= elements.length){
+          if(elements.length*2<MAX_SIZE){
+              int[] temp = new int[elements.length * 2];
+          }
+          else if(elements.length <= MAX_SIZE && elements.length *2 > MAX_SIZE){
+              int[] temp = new int[MAX_SIZE];
+          }
+          System.arraycopy(elements, 0, temp, 0, elements.length);
+          elements = temp;
     }
-
     return elements[size++] = value;
   }
 
