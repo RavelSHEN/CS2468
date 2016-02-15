@@ -1,7 +1,6 @@
 /**
- * Runtime exception thrown when one tries to perform operation top or
- * pop on an empty stack.
- * @author Roberto Tamassia
+ * Runtime exception thrown when one tries to perform operation front or
+ * dequeue on an empty queue.
  */
 
 public class EmptyQueueException extends RuntimeException {

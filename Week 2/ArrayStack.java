@@ -2,7 +2,7 @@
   * Implementation of the Stack interface using a fixed-length array.
   * An exception is thrown if a push operation is attempted when the
   * size of the stack is equal to the length of the array.
-  * 
+  *
   * @author Natasha Gelfand
   * @author Roberto Tamassia
   * @see FullStackException
@@ -32,7 +32,7 @@ public class ArrayStack {
   }
  /**
   * Initialize the stack to use an array of given length.
-  * 
+  *
   * @param cap length of the array.
   */
   public ArrayStack(int cap) {
@@ -42,7 +42,7 @@ public class ArrayStack {
  /**
   * O(1) time.
   */
-  public int size() { 
+  public int size() {
     return (top + 1);
   }
  /**

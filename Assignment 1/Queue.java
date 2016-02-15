@@ -4,11 +4,9 @@ public interface Queue{
 
   public boolean isEmpty();
 
-  public Object front()
-    throws EmptyQueueException;
+  public Object front() throws EmptyQueueException;
 
-  public void enqueue(Object o);
+  public void enqueue(Object obj) throws FullQueueException;
 
-  public Object dequeue()
-    throws EmptyQueueException;
+  public Object dequeue() throws EmptyQueueException;
 }
